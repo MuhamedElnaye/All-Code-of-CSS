@@ -1,0 +1,27 @@
+div {
+  margin: 50px auto;
+  padding: 63px;
+  width: 407px;
+  background-image: linear-gradient(
+    to left,
+    green 10%,
+    black 10%,
+    black 20%,
+    blue 20%,
+    blue 30%,
+    brown 30%,
+    brown 40%,
+    yellow 40%,
+    yellow 50%,
+    #005d80 50%,
+    #005d80 60%,
+    #4c83af 60%,
+    #4c83af 70%,
+    #105732b8 70%,
+    #105732b8 80%,
+    #783b9de3 80%,
+    #783b9de3 90%,
+    #7f8e1ee3 90%
+  );
+  transform: skewX(50deg);
+}

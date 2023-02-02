@@ -1,0 +1,2399 @@
+/*
+ selector {
+        {} = meaning curly braces
+        (property : value;) = calling declarartion
+} 
+*/
+/* 05-background color ,image ,repeat 
+ex:
+div {
+    ################### A-background coLor name  ##################
+    background-color: red;
+    Red green blue (A = 30%) meaning alpha channel الشفافية
+    background-color: rgb(0, 0, 0, 30%);
+    HexaDecemal color codeing 
+    background-color: #00ffea;
+    #################### B-background-image #############################
+    background-image: url(../images/IMA1.jpg);
+    #################### C-background-repeat meaning repeat some thing you want  ######
+    background-repeat: no-repeat;
+    horizontal
+    background-repeat: repeat-x;
+    rasy
+    background-repeat: repeat-Y;
+}*/
+/* 06-background attachment ,Postion and Size 
+EX:
+.if1 {
+
+    background-image: url(../images/IMA1.jpg);
+    background-color: #00ffea;
+    background-repeat: no-repeat;
+    //using attachment to fixed or move the image
+background-attachment: scroll;
+background-attachment: fixed;
+background-position: left top;
+background-size: cover;
+background-size: contain;
+background-size: 200px 200px;
+background-size: 50% 50%;
+/*
+    auto= don't do any thing in  image 
+    cover = cover all page in it
+    contain = make image showed all in the page and not streatch
+     
+}*/
+/* 07-Padding meaning borders   
+    a=> it's moving with pointer of the clock [top Right  bottom left ]
+    b=>when only two value write or three  (top) take from bottom and reverse 
+     (Right) take from (left) and reverse
+    c=> don't accept negative value. 
+EX:
+div {
+    font-size: 40px;
+    background-color: rgb(0, 132, 255, 30%);
+    padding: 10px 20px;
+    //only padding bottom two method
+    padding: 0 0 10px;
+    padding-bottom: 10px;
+}
+*/
+/* 08-Margin 
+    =Accept a nigative value ; 
+EX:
+div {
+    background-color: brown;
+    padding: 10px;
+    // margin: 70%; //
+    // Auto = it's meaning that divid the space with equal righ and left 
+    EX: width 70%
+    then margin-left: 15%;
+    then margin-Right: 15%;
+    //
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    // For All directions //
+    margin: auto;
+}*/
+/* 09-Border  
+div.nnn {
+    background-color: rgba(15, 50, 245, 0.205);
+    font-size: 30px;
+    width: 50%;
+    margin: auto;
+    padding: 30px;
+    // you should write three stepds to show border 
+    1-border-width
+    2-border-color
+    3-border-style:solid;  
+    //
+    border-width: 20px;
+    border-color: brown green blue;
+    border-style: solid;
+    // Border Shortneth //
+    border: 25px solid brown;
+}*/
+/* 10-Outline 
+can't control in any dirction of the border and it's don't take any space in the borer width
+outline: darkorange solid 20px;
+*/
+/* 11-Dispaly Elements:
+  a-Block Elements [like div]
+    -Take All width if no Width
+    -Add Line Break 
+    -Respect  Padding ,mergin,Width and Hight
+  b-Inline Elements like [span]
+    -Respect  Padding ,mergin [Just left + Right ].
+    -Don't respect Width and Hight . 
+    -Don't Add Line Break
+  c-Inline-Block  Elements
+    -Allow ELements Before and After it
+    -Respect  Padding ,mergin,Width and Hight
+*/
+/* 12-Element Visibility and Use Cases 
+    display: none; = meaning hidden the element and (delet) here space (WorkFlow).
+    visibility: hidden; = meaning hidden the element and (don't) delet here space (WorkFlow).
+Ex:
+div.first {
+     display: none; 
+    visibility: hidden;
+}
+ */
+/* 13-Grouping:
+    multiple selector.
+EX :of Grouping......
+.first,
+.second,
+.third,
+.four,
+.fife {
+    padding: 15px;
+    margin: 12px 0;
+    background-color: rgb(180, 155, 116);
+}
+div.first {
+    border-bottom: 2px solid green;
+    color: green;
+}
+
+
+div.second {
+    border-bottom: 2px solid red;
+    color: red;
+}
+
+div.third {
+    border-bottom: 2px solid blue;
+    color: blue;
+}
+
+div.four {
+    border-bottom: 2px solid black;
+    color: black;
+}
+
+div.fife {
+    border-bottom: 2px solid rgb(204, 189, 202);
+    color: rgb(0, 255, 179);
+}
+*/
+/* 14-Nesting
+EX:
+ .first .my-p1 {
+    color: blue;
+} 
+div .my-p1 {
+    color: brown;
+}
+
+div .my-p1 .sp {
+    color: red;
+}*/
+/* 15-dimantion width and height 
+    width: fit-content; = it's using to the content change by the content
+    (Specifies the width of the content area, padding area or border area)
+Ex:
+div {
+    background-color: aqua;
+    display: inline-block;
+     width: 200px;
+    min-width: 96px;
+    max-width: 202px;
+    height: 30px;
+    max-height: 20px; 
+    width: fit-content;
+} */
+/* 16-Overflow X and Y 
+overflow: visible; defuelt .
+overflow: hidden; meaning hidden the content that increement about the width.
+overflow:scroll ; put the the scroll.
+overflow: auto  ; doing scroll when the content increemant about the width our height.  
+EX:
+div {
+    width: 221px;
+    height: 140px;
+    background-color: rgb(20, 141, 101);
+    margin: 20px auto;
+    border-radius: 6px;
+    overflow: auto;
+    overflow-y: hidden;  directio top to bottom (virtical)
+    overflow-x: hidden; directin Righ to left (horizental)
+}*/
+/* 17-text Color and shadow
+    text-shadow:H-shadow V-shadow Blur color ;
+EX:
+div {
+    text-shadow: 0 0 0 blue;
+}*/
+/* 18-text alighment
+    a-alighment = the alighn of the text 
+    b-Dirction  = the diirction of the text
+    c-vertical alighment = using in the alighn of the image
+Ex:
+div {
+    background-color: aqua;
+    text-align: center;
+    direction: ltr;
+    vertical-align: bottom;
+}*/
+/* 19-text Decoration and Transform 
+    a-text decoration = using in case of deleting underline of the links.
+    b-text Transformation = using in control writing  the words in a paragraph 
+div {
+    text-decoration: none;
+    text-transform: capitalize;
+    color: white;
+    background-color: blue;
+    border-radius: 3px;
+    padding: 4px;
+}*/
+/* 20-text space 
+    a-letter spacing = spacing between letter 
+    b-indentation = the space befor the letter
+    c-line height=> 1=100%  and 1.6=160%
+    d-word spacing + Wraping +
+    white-space: nowrap;= meaning don't do a break 
+    word-break: break-word; =it's using in long links  and long titel 
+EX:
+div {
+    background-color: aqua;
+    width: 300px;
+    letter-spacing: 2px;
+    text-indent: 10px;
+    line-height: 1.6;
+    word-spacing: 2px;
+    //white-space: nowrap;
+    word-break: break-word;
+}*/
+/* 21-text overflow and Usecase
+   a-text overflow using when the text be long about the width and it put ellipsis
+    in the place of cuting words 
+    b-div:hover {overflow: visible;} to show the complet of the text when stop in it 
+EX::
+div {
+    background-color: blue;
+    padding: 20px;
+    width: 200px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+div:hover {
+    overflow: visible;
+}*/
+/* 22-inheritance 
+    padding: inherit; = meaning inhert the paddding from the paren(div .first) =20px
+    border-color:inherit;=meaning inhert the border color from the parent(div .first) =brown 
+EX:
+div {
+    border: 2px solid #0f7957;
+    padding: 7px;
+    background-color: #eee;
+    font-size: 20px;
+    text-align: center;
+    border-radius: 17px;
+}
+
+div p {
+    border: 2px solid;
+    padding: inherit;
+    border-color: inherit;
+    border-radius: 17px;
+
+}
+ */
+/* 23-typography ==> Font family
+    font-family: Arial, Helvetica, sans-serif; 
+    sans-serif= meaning letter without dash in the letter 
+     font-family: 'Cairo', sans-serif; fro internet 
+Ex:
+body {
+    font-family: 'Cairo', sans-serif;
+     font-family: Arial, Helvetica, sans-serif; 
+}*/
+/* 24-typography ==>font size and CSS Units
+note : the defeult Font size for web page is 16px.     
+-CSS Units
+    a-px
+    b-em = (meaning time) it's not fixed--> it's inhert from the parent that it found in it.
+     1em =16px that is wrong 
+    
+    c-rem = root element  meaning inhert front size from (html tage) 
+    
+    d-percentage = it's inhert from font size of parent 
+    (in case the parent font size 30px
+    100% = meaning all size of parent =30px
+    150% =(100%=30px)+(50%=15px) =45px
+
+    e-VW=viewport width (meaning all white plank in the browser)
+      VW it's using to can control of the font size according to the size of page   
+        VW=(size of the screen /100)=...vm
+        ex: 
+            screen =900
+            vm=900/100= 9vm 
+            5vm = 9vm * 5vm =45px
+    For reading :
+    -vwmin
+    -vwh
+
+div span {
+    
+    font-size: 5vw;
+    font-size: 2em;
+}
+*/
+/* 25-typography font style ,variant,weight
+    font-style: italic;
+    font-variant: small-caps; doing the font  capitalize but mor small
+    font-weight: bold; doing font bold may be 100,200 ,300,.... if it can accept this value 
+*/
+/* 26-mouse cursor
+meaning the shap of the mouse 
+ex:
+span {
+    cursor: pointer;
+    cursor: grab;
+    cursor: move;
+}
+*/
+/* 27-float and Clear
+float = meaning that the elements swiming the container to equal to the container size 
+clear:both; = meaning claer any thing from left and right and don't put any thing there   
+EX:
+.parent div {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: center;
+    background-color: rgb(85, 50, 50);
+    display: inline-block; DON't work with float 
+    float: left;
+    width: 25%;
+}
+
+.clear {
+    clear: both;
+}
+*/
+/* 28-master the CSS calculation
+
+==>margin=2%; 
+-when [percentsge]
+content width is :100%
+6 spaces 2%(marginleft)*6=12% from content width
+88 Avialable space 
+5 elementes the width is :88/5 =17.6
+using calc:
+width:calc(88/5);
+
+==>margin=10px; 
+-when [px]
+content width is :100%
+6 spaces 10px(marginleft)*6=60px from content width
+100%-60px Avialable space 
+5 elementes the width is :(100%-60px)/5 =..
+using calc:
+width:calc((100%-60px)/5);
+*/
+/* 29-opacity meaning doing visablite(الشفافية ) for all the content and the div width 
+Ex:    
+opacity: 0.5;
+*/
+/* 30-position
+    -static = default
+    -relative = onle element move from his position
+    -absolute = it's move according to the parent
+    to do that in the parent should the (position) in the parent is (relative)
+    Ex:
+    .parent{
+        position:relative;
+    }   
+    .parent .one {
+        position :absolute; 
+    } 
+    -fixed = meaning fixed in the page and go whith you in every where you want
+    position: fixed;    
+    -sticky = meaning move it until tell you where it will and should tell him the location 
+    of stoping scroll
+    EX:
+       position:sticky;
+       top or bottom or right or left ;
+       top:20px
+  div {
+    background-color: aqua;
+    position: sticky;
+    top: 30px;
+}
+       */
+/* 31-Z-index 
+ it's don't work without posision if not fount will not work
+the big value is the top of the arrenge 
+Note default postion [static]
+EX:
+.one {
+    background-color: rgb(169, 248, 248);
+    width: 150px;
+    text-align: center;
+    padding: 10px;
+    z-index: 3;
+}
+
+.two {
+    background-color: rgb(33, 61, 218);
+    width: 150px;
+    text-align: center;
+    padding: 10px;
+    z-index: 2;
+}
+
+.three {
+    background-color: rgb(8, 236, 46);
+    width: 180px;
+    text-align: center;
+    padding: 10px;
+    z-index: 1;
+}
+
+div {
+    position: absolute;
+}
+*/
+/* 32-lists styling
+    it's using  in the (reset the style of list)
+EX:
+ul {
+    list-style: none;
+    background-color: rgb(151, 151, 228);
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+    */
+/* 33-Table styling 
+table {
+    width: 100%;
+    border: 2px solid blue;
+    border-spacing: 0px;
+
+}
+
+table td {
+    background: #eee;
+    padding: 15px;
+    border: 1px solid #a9a9cb85;
+}
+
+table thead td {
+    background-color: rgb(48, 156, 27);
+    text-align: center;
+    font-style: italic;
+    font-weight: bold;
+}
+*/
+/* 34-Pseudo(مذيفة) and Classes 
+EX:
+div {
+    background-color: rgb(123, 158, 146);
+    width: 300px;
+    height: 100px;
+}
+
+a {
+    // don't put uderline //
+    text-decoration: none;
+    color: rgb(91, 126, 55);
+}
+
+a:hover {
+    // what is the action will happend after be a click //
+    color: blue;
+}
+
+.ch:checked+label {
+    // meaning in case of checked change the color of lable //
+    color: rgb(130, 172, 51);
+    // meaning in case of checked change the display of lable to hiddin //
+    display: none;
+}
+
+a:visited {
+    // meaning what will happen for the links that are visited //
+    color: rgb(255, 153, 0);
+}
+
+div:empty {
+    // do this properitys for all empty elements(div or any alements) //
+    border: 5px solid green;
+}
+
+.in {
+    border: 5px solid brown;
+    padding: 10px;
+    margin: 30px 30px;
+}
+
+.in:focus {
+    // meaning do this action when focus this element  //
+    border-color: rgb(22 104 59);
+    // outline(none ) meaning delet the line that put by default //
+    outline: none;
+}
+
+*/
+/* 35-Pseudo(مذيفة) Elements
+First letter: meaning do this proprites for this first letter 
+First line :meaning do this proprites for this first line 
+Selection :if we select some thing in our page will do this properities 
+.one span {
+    color: white;
+    background-color: black;
+    font-size: 60px;
+
+}
+
+.two::first-letter {
+
+    color: white;
+    background-color: black;
+    font-size: 60px;
+}
+
+.three::first-line {
+    color: rgb(5, 146, 23);
+    background-color: black;
+    font-size: 20px;
+
+
+}
+for specify class calling two
+.two::selection {
+    background-color: black;
+    color: yellow;
+}
+:for all selector in our page 
+::selection {
+    background-color: black;
+    color: yellow;
+}
+*/
+/* 36-Pseudo(مذيفة) Elements
+
+    a-After
+    b-Befor
+    it's should write content:""; to befor and after work
+Ex:
+.parent {
+    margin-bottom: 20px;
+    overflow: hidden;
+
+}
+
+.one {
+    background-color: #97b619;
+    padding: 10px;
+    width: 600px;
+    float: left;
+    position: relative;
+
+}
+
+.user {
+    background-color: #717465;
+    width: 50px;
+    margin-right: 40px;
+    padding: 10px;
+    height: 211.5px;
+    float: left;
+    font-size: 50px;
+    text-align: center;
+}
+
+.one::after {
+    // should write to after and befor work  //
+    content: "";
+    position: absolute;
+    width: 7px;
+    height: 100%;
+    right: -12px;
+    background-color: #009688;
+    top: 0;
+}
+
+.one::before {
+    content: "";
+    position: absolute;
+    background-color: white;
+    width: 0;
+    height: 0;
+    left: -30px;
+    top: 50%;
+    margin-top: -15px;
+    border-width: 10px;
+    border-style: solid;
+    // transparent to  make color hiddin  //
+    border-color: transparent green transparent transparent;
+
+
+} */
+/* 37-Pseudo(مذيفة) Elements  [content and trainings]
+
+.parent {
+    margin-bottom: 20px;
+    overflow: hidden;
+    counter-increment: member-counter;
+}
+
+.one {
+    background-color: #97b619;
+    padding: 10px;
+    width: 600px;
+    float: left;
+    position: relative;
+
+}
+
+.user {
+    background-color: #717465;
+    width: 50px;
+    margin-right: 40px;
+    padding: 10px;
+    height: 211.5px;
+    float: left;
+    font-size: 50px;
+    text-align: center;
+}
+
+// .one::after {
+    // should write to after and befor work  //
+    content: "";
+    position: absolute;
+    width: 7px;
+    height: 100%;
+    right: -12px;
+    background-color: #009688;
+    top: 0;
+} //
+
+.one::before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    left: -50px;
+    top: 50%;
+    margin-top: -15px;
+    border-width: 20px;
+    border-style: solid;
+    // transparent to  make color hiddin  //
+    border-color: transparent green transparent transparent;
+}
+
+
+// meaning show this block befor the content 
+.one::before {
+    content: attr(data-text);
+    display: none;
+}
+.one:hover::before {
+    display: block;
+}//
+
+.one::after {
+    // counter() its' using to count number of the elements that you want 
+    you should  write in the parent
+    counter-increment:member-counter;
+    //
+    background-color: #40eede;
+    content: counter(member-counter);
+    width: 40px;
+    position: absolute;
+    height: 40px;
+    text-align: center;
+    font-size: 37px;
+    font-weight: bold;
+    right: -20px;
+    top: 50%;
+    margin-top: -23px;
+}
+
+ul {
+    list-style: none;
+}
+
+ul li {
+    position: relative;
+    margin-bottom: 18px;
+    padding-left: 14px;
+}
+
+ul li:before {
+    content: "before  ";
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    left: -50px;
+    top: 50%;
+    margin-top: -15px;
+    border-width: 20px;
+    border-style: solid;
+    // transparent to  make color hiddin  //
+    border-color: transparent green transparent transparent;
+}
+*/
+/* 38-vender prefixes  
+        [1] new CSS feature Appeared Browsers tests the feature in version (X)
+        [3]Brosers add prefixs to Giv devolepers the ability to use it  
+        [4]the feature is fully supported inversion (Y), No need fo prefix  
+=> prefixes of browsers:
+    -webkit- (meaning)=>chorme, safari,Nem opera version
+    -moz- (meaning)=> firfox
+    -ms- (meaning)=>Ie ,Edge
+    -o-  (meaning) =>old version of opera 
+    [to know if this properity work or not go to web page (Can I use)]
+
+=>TO Can access this should:
+    1- most of users are using a modern browsers
+    2- VS code addon to add the prefixs (automatically)
+    3-download a (task Runner in the VS ) 
+EX:
+.classname {
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    border-radius: 10px;
+}   */
+/* 39-border raduis 
+div {
+    width: 150px;
+    height: 150px;
+    background-color: brown;
+    margin: 100px auto;
+    border-radius: 50%;
+    border-top-left-radius:20px 20px ;
+    border-top-right-radius:10px 10px;
+    outline: 2px solid #4f11be;
+}*/
+/* 40-Box shadows and Examples 
+    box-shadow:[Horizental-Shadow | Vertical-Shad | Blur الضباب | Spread | color |Inset]
+    default: outset and black color
+    ->the right method to accecpt your element: 
+      box-shadow: 1px 1px 1px 1px inset black;
+    - You can do more on shadow
+           box-shadow: 5px 5px 10px 10px black,
+           5px 5px 10px 10px yellow,
+           5px 5px 10px 10px red,
+           5px 5px 10px 10px blue;
+    // to avoid the old version that don't accept type of elements 
+    -webkit-box-shadow: 0 0 0 0 brown outset;
+    -moz-box-shadow: 0 0 0 0 brown outset;
+    -ms-box-shadow: 0 0 0 0 brown outset;
+    -o-box-shadow: 0 0 0 0 brown outset; 
+EX:
+div {
+    box-shadow: 5px 5px 10px 10px black,
+        5px 5px 10px 10px yellow,
+        5px 5px 10px 10px red,
+        5px 5px 10px 10px blue;
+    width: 500px;
+    height: 30px;
+    text-align: center;
+    font-weight: bold;
+    background-color: brown;
+    margin: 80px auto;
+    border-radius: 26%;
+    padding: 17px;
+ 
+}  */
+/* 41-Box Model and Box Sizing 
+    //to save element arreng or it's show and do any thing out it and don't affect it.       
+    box-sizing:border-box;
+    ==>wite this to do box-sizing for all elements in your web page
+    *{
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+     }
+EX:
+     .parent {
+    width: 600px;
+    overflow: hidden;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: rgb(50, 114, 114);
+    }
+
+.one {
+    box-sizing: border-box;
+    background-color: rgb(204, 198, 190);
+    width: 300px;
+    float: left;
+    border: 20px solid wheat;
+    padding: 30px;
+    }
+     */
+/* 42-transition (meaning animation and moving ) 
+    -Duration = the time of moving and make it smoth
+        transition-duration: 0.5s; s=second , ms=mili second
+    
+    -Delay = meaning late the move
+        transition-delay: 2s;
+    
+    -Properity = to determin the properities that you want to do animation about it . 
+        transition-property: all;
+        transition-property: margin-left, margin-top; (to determin the property you want) 
+    -Time Function(to understant it see it the brother ) = it's control the spead of the animation in 
+        [first,midel,End]
+        transition-timing-function:ease ; 
+        -ease == (ease-in) = start slow and spead in the End
+        -ease-out  
+EX:
+    
+.one {
+    width: 100px;
+    height: 100px;
+    background-color: rgb(34, 107, 107);
+    transition-duration: 3s;
+    transition-delay: 0.3s;
+    transition-property: all;
+    transition-property: margin-left, margin-top;
+    transition-timing-function: ease;
+    transition: width, height 3s, 2s linear;
+}
+
+.one:hover {
+    margin-left: 50px;
+    margin-top: 20px;
+    height: 200px;
+    width: 300px;
+}
+*/
+/* 43-!Import Declaration and Use Case  
+    -it's using to can access about any thing you can't access about it 
+    .one {
+    background-color: brown !important;
+}
+*/
+/* 44-The Margin Collapse 
+collapse meaning  combination two div together.
+[1] only vertical margin collapse
+[2] bigger margin wins
+[3] margin collapising with elements without anything between them
+[4] Nesting doesn't prevent collapsing
+Ex:
+.parent {
+    overflow: hidden;
+    margin: auto;
+    width: 400px;
+    height: 200px;
+    padding: 10px;
+    background-color: aquamarine;
+}
+
+.parent .one,
+.parent .two {
+    float: left;
+    width: 50%;
+    height: 100%;
+
+}
+
+.one {
+    background-color: brown;
+
+}
+
+.two {
+    background-color: chartreuse;
+}
+
+.down {
+    background-color: bisque;
+    color: cadetblue;
+    height: 100px;
+    margin-top: 20px;
+}
+
+.up {
+    background-color: red;
+    color: aliceblue;
+    height: 100px;
+}
+*/
+/* 45-CSS variable
+    -Global Variable
+    -Local Variable
+    -we use function :var(variable name,fallback Value)
+     fallback value = meaning what will hapen if this value not found 
+    -you should using (:root{})to can do variable
+EX:
+:root {
+    //Global  variable
+    --parentcolor: blue;
+}
+
+.parent {
+    //local variabl
+    --parentpadding:calc(20px+10px)
+    overflow: hidden;
+    margin: auto;
+    width: 400px;
+    height: 200px;
+    padding: 10px;
+    background-color: var(--parentcolor, green);
+}
+
+.parent .one,
+.parent .two {
+    float: left;
+    width: 50%;
+    height: 100%;
+
+}
+
+.one {
+    background-color: var(--parentcolor, green);
+
+}
+
+.two {
+    background-color: var(--parentcolor, green);
+
+}
+
+.down {
+    background-color: var(--parentcolor, green);
+
+    color: cadetblue;
+    height: 100px;
+    margin-top: 20px;
+}
+
+.up {
+    background-color: var(--parentcolor, green);
+
+    color: aliceblue;
+    height: 100px;
+}
+*/
+/* 46-flex Box-parent direction  ,Wrap and Flow 
+a-flexible box
+    -dispaly:flex => to start flexible box
+    -for parent 
+    -flex-direction: row; meaning spread elements according to direction of the page[rtl,ltr]
+    -flex-direction: row-reverse; maening reverse direction of elements without reverse page.
+    - flex-direction: column;the same row but column
+    -flex-direction: column-reverse; the same row but column 
+b-flex-wrap=> using to can control in the new element if are a new change in our elements 
+    flex-wrap: wrap; defaul(nowrap)
+    -in case there are an incement element defaul[nowrap]   and to can control in this element
+    -flex-wrap: wrap-reverse; to revese the element togther
+c-shorthand for flex:
+        flex-flow:[flex-direction]  [flex-wrap]
+        Ex: flex-flow: row wrap;
+EX:
+    flex-wrap: wrap;
+    flex-wrap: wrap-reverse;
+    flex-direction: row-reverse;
+    flex-direction: column;
+    flex-direction: column-reverse;
+    */
+/* 47-flex Box-parent  justify-content 
+    -justify-content =to can control the content and it distribute 
+    the content [ horizontal ] not [vertical] [revers align-items] 
+    
+    -align-items =to can control the content and it distribute 
+    the content [ vertical ] not horizental [reverse justify-content]
+Ex:
+ display: flex;
+    flex-direction: row;
+    // space-between to put space between elements //
+    justify-content: space-between;
+    // to put space around elements //
+    justify-content: space-around;
+    // (space-evenly) do combination between [space-betwwen and space-around]  //
+    justify-content: space-evenly;
+    // flex-flow: row wrap; //
+    // justify-content: flex-start;
+    justify-content: flex-end;
+    justify-content: center;
+    justify-content: end; //
+    */
+/* 48-flex parent align items 
+
+    align-items[the default value is (stretch)]
+    align-items[] =to can control the content and it distribute the content [ vertical ] not horizental [reverse justify-content]
+Ex:
+div.center {
+    background-color: aqua;
+    width: 300px;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    //to do stretch for this element
+    //All these  arrenges Are colume not row
+    align-items: stretch;
+    align-items: center;
+    align-items: flex-end;
+    align-items: flex-start;
+}
+*/
+/* 49-flex parent align content
+    -align-content[the default value is (stretch)]
+    -it'S using to can controle all the content in your bage together  
+EX:
+    align-content: space-between;
+    */
+/* 50-flex box Child Grow ,Shrink , Order 
+    a-Grow(default value = 0) [reverse] => Shrink
+        -meaning grow element the same to distrebute it in the space of the parent
+    Note: To can control in only one element to do [flex-Grow] should writ it in (line-style)
+    EX:<div style="flex-grow:3">one</div> OR Class
+    flex-grow: 1 OR 2,3,4;
+    b-Shrink(الانكماش) (default value = 1) 
+        -meaning smalling of elements
+    flex-shrink: 1 OR 2,3,4;
+    c-Order it's using to order or arrange  elements like you want.
+        .a1 {order: 6;}
+        .a2 {order: 2;}
+        .a3 {order: 1;}
+        .a4 {order: 3;}
+        .a5 {order: 4;}
+    .a6 {order: 5;}
+*/
+/* 51-flex box Child [ (flex basis) and (flex shorthand)]
+    a-flex-basis (dafault value(auto))
+     -it's using to can control the width and height automatcally by writing in the element
+     ==>flex-basis:200px;
+     -it's respect a [max-width]
+     b-flex shorthand 
+        flex:[Grow] [shrink] [flex-basis] [the default value for them (0 1 auto)]
+        Ex:flex:1 3 200px; 
+Note  :  display: inline-flex; you shoud write it in two element that you want.
+        EX:
+        <div class="one"  style=" flex:inline-flex;">one</div> 
+        <div class="two"  style=" flex:inline-flex;">two</div> 
+ */
+/* 52-flex box Child [align-self ,Games and Task] 
+    align-self (default=auto) it's using to can control only one value 
+    align-self:auto,end,center,start; 
+*/
+/* 53-flex froggy Game
+very important notes:
+    1-Notice that when the [flex direction] is a column,
+     [justify-content] changes to the (vertical) and [align-items] to the (horizontal).
+
+    2-Sometimes reversing the row or column order of a container is not enough.In these cases, 
+    we can apply the order property to individual items. By default, items have a value of 0, 
+    but we can use this property to also set it to a positive or negative integer 
+    value (-2, -1, 0, 1, 2). 
+
+    3- [align-content] determines the spacing between lines,
+       while [align-items] determines how the items as a whole are 
+       aligned within the container.When there is only one line,
+        align-content has no effect.
+.flex {
+    display: flex;
+    background-color: antiquewhite;
+    width: 800px;
+    height: 300px;
+    padding: 20px;
+    margin: 20px auto;
+    // flex-wrap: wrap; //
+    // align-content: space-between; //
+    // flex-direction: column; //
+    // justify-content: center; //
+    // space-between to put space between elements //
+    // justify-content: space-between; //
+    // to put space around elements //
+    // justify-content: space-around; //
+    // (space-evenly) do combination between [space-betwwen and space-around]  //
+    // justify-content: space-evenly; //
+    // flex-flow: row wrap; //
+    // justify-content: flex-start;
+    justify-content: flex-end;
+    justify-content: center;
+    justify-content: end; //
+    // flex-wrap: wrap; //
+    // flex-wrap: wrap-reverse; //
+    // flex-direction: row-reverse; //
+    // flex-direction: column; //
+    // flex-direction: column-reverse; //
+}
+
+.flex div {
+
+    background-color: blueviolet;
+    color: white;
+    width: 600px;
+    text-align: center;
+    padding: 12px;
+    margin-right: 5px;
+    // height: 300px; //
+    // justify-content: center; //
+    // display: flex; //
+    // flex-grow: 1; //
+    // flex-shrink: 1; //
+}
+
+
+.a1 {
+    order: 3;
+    flex-basis: 300px;
+    flex: 3 1 300px;
+}
+*/
+/* 54-filters it's using For image
+    1-filter: grayscale(100%);[black and white]
+    2-filter: blur(4px); [ضباب]
+    3-filter: invert(100%);[meaning  reverse image]
+    4-filter: drop-shadow(10px 10px 5px orange);
+      10px =  offset-x sets the horizontal offset. Can be negative.
+      10px =  offset-y sets the vertical offset. Can be negative.
+      5px  =   blur-radius, optional, sets the blur radius for the shadow. It defaults to 0, no blur.
+      spread-radius, optional, sets the spread radius. Expressed in px , rem or em
+      Orange =  color, optional, sets the color of the shadow
+Ex:
+    .imm {
+    width: 500px;
+    height: 500px;
+}
+
+img {
+    transition: 0.3s;
+    // filter: grayscale(100%); //
+    // filter: blur(4px); //
+    // filter: invert(100%); //
+    // filter: opacity(50%); //
+}
+
+img:hover {
+    // filter: grayscale(0); //
+    // filter: blur(0); //
+    // filter: invert(0); //
+    // filter: opacity(100%) blur(2px); //
+    // filter: drop-shadow(10px 10px 5px orange);
+    filter: drop-shadow(21px 11px 10px #08ff00); //
+    filter: sepia(50%);
+
+}
+      */
+/* 55-Gradients[التدرج في الالوان] 
+    linear-gradient(direction OR angle ,color1 start ,color1 end,color2 start ,color2 end,
+    color3 start ,color3 end,..... )
+    Ex:background-image: linear-gradient(50deg or [to right] ,
+            green 10%,
+            black 10%);
+Ex:
+div {
+    position: relative;
+    background-color: #eee;
+    padding: 10px;
+    margin: 60px auto;
+    width: 400px;
+    height: 200px;
+}
+
+div::before {
+    content: "";
+    position: absolute;
+    top: -9px;
+    left: 0px;
+    width: 100%;
+    background-color: rebeccapurple;
+    height: 7px;
+    //you should be a [background-image]
+    background-image: linear-gradient(50deg,
+            green 10%,
+            black 10%,
+            black 20%,
+            blue 20%,
+            blue 30%,
+            brown 30%,
+            brown 40%,
+            yellow 40%,
+            yellow 50%,
+            #005d80 50%,
+            #005d80 60%,
+            #4c83af 60%,
+            #4c83af 70%,
+            #105732b8 70%,
+            #105732b8 80%,
+            #783b9de3 80%,
+            #783b9de3 90%,
+            #7f8e1ee3 90%);
+}
+*/
+/* 56-pionter Events  and [caret color]
+    pointer-events: none; to can't control in the content
+    caret-color: aqua;  to can control in the pointer of the text you want
+    */
+/* 57-Grid parent  and [Grid template columns]
+    Grid 
+    properties of  parent:
+    a-display:(grid) or (inline-grid) in case there another element in the same line;
+    
+    grid-template-columns: [numer of columns in]=>with [width]
+    [ px,%,auto,fraction(fr),repeat(num column,auto or value),mix all of them]-> meaning  width;
+
+    difrence between [auto] and [fraction] 
+    auto = is (shy) take width olny the width of the content
+    fraction = is gready take all width avilable   
+    EX:
+    1- grid-template-columns: 100px 100px 100px 100px 100px; meaning 5 [column 
+     width] of everyone is 100px  
+  
+    2-grid-template-columns: 20% 20% 20% 20% 20%; [bercentage]
+    
+    3-grid-template-columns: auto auto auto auto auto; 
+      meaning determin the width to column automatic
+
+    4-grid-template-columns: repeat(5, auto); 
+      5 => meaning number of column   auto=>or any value you want 
+    
+    5-mixed grid-templet
+      grid-template-columns: 100px repeat(3, 50px) 20% repeat(2, auto); 
+    
+    6-grid-template-columns: auto auto auto 1fr; 
+      grid-template-columns: repeat(5, 1fr); 
+
+    6-grid-template-columns: auto auto auto 1fr; 
+    ==>in case of using [fraction 1fr or more ] (auto)first , second and rows third take only 
+    the space of content [width] and (1fr)fourt take enduring الباقي of [width] 
+    */
+/* 58-Grid parent  and [Grid template Rows] and [Gap]
+    grid-template-rows: [numer of Rows ]=>with [height]
+    [ px,%,auto,fraction,repeat(num column,auto or value),mix all of them]-> meaning  height;
+
+    difrence between [auto] and [fraction] 
+    auto = is (shy) take height olny the height of the content
+    fraction = is gready take all height avilable
+    
+    ===>GAP meaning space between elements:
+    Note : the best way of using gap with fraction
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        row-gap: 20px; space between Rows 
+        column-gap: 20px; space between columns
+        =>shorthand of gap togther:
+          gap:20px 20px;
+*/
+/* 59-Grid parent and [justify-content] and [ align-content] 
+    - they like flex identical:
+        .parent {
+            width: 800px;
+            height: 600px;
+            margin: 20px auto;
+            padding: 0px;
+            background-color: green;
+            display: grid;
+            grid-template-columns: repeat(4, auto);
+            grid-template-rows: repeat(3, auto);
+            justify-content: space-between;
+            align-content: space-between;
+            }
+EX:
+.parent {
+    width: 800px;
+    height: 600px;
+    margin: 20px auto;
+    padding: 0px;
+    background-color: green;
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    grid-template-rows: repeat(3, auto);
+    justify-content: space-between;
+    align-content: space-between;
+
+    row-gap: 20px;
+    column-gap: 20px;
+    shorthand
+    gap: 20px 20px;
+
+    grid-template-rows: 200px auto 200px;
+    fist and third rows take only the space of content [height]  and second take enduring الباقي of [height]
+    grid-template-rows: repeat(3, calc(100% / 3));
+}
+
+.parent div {
+    background-color: blue;
+    font-size: 30px;
+    text-align: center;
+    color: aliceblue;
+    padding: 20px;
+
+}  
+*/
+/* 60-Grid parent Full layout with grid template areas 
+    grid-template-areas: "first row" "second row " "third row " .......;
+    you should calling it by [grid-area] in his class
+    put (.) to leave one palce or one column  or more
+Ex:
+    ul {
+    list-style: none;
+}
+
+ul li {
+    display: inline-block;
+}
+
+.page {
+    height: 100vh;
+    display: grid;
+    background-color: #eee;
+    grid-template-columns: repeat(10, 1fr);
+    grid-template-rows: 50px auto 50px;
+    shothand for row1 and columns
+    grid-template-areas:
+        "logo logo . nav nav nav nav nav nav nav"
+        "cont  cont cont cont cont cont cont cont sid sid"
+        "foot foot foot  foot foot foot foot foot foot foot "
+    ;
+}
+
+h3 {
+    grid-area: logo; the name of the grid-template-areas of h3 [logo]
+    background-color: rgb(50, 97, 97);
+    color: white;
+}
+
+nav {
+    grid-area: nav;the name of the grid-template-areas of nav [nav]
+    background-color: rgb(55, 112, 41);
+    color: white;
+}
+
+section {
+    grid-area: cont;the name of the grid-template-areas of section [cont]
+    background-color: rgb(87, 78, 139);
+    color: white;
+}
+
+aside {
+    grid-area: sid;the name of the grid-template-areas of aside [sid]
+    background-color: rgb(109, 12, 69);
+    color: white;
+}
+
+footer {
+    grid-area: foot; the name of the grid-template-areas of footer [foot]
+    background-color: black;
+    color: white;
+}
+*/
+/* 61-Grid child column and row 
+it's using to can control the [calling span] like table to can mirge two or more 
+columns or rows easly  
+
+grid-column: colum-start / column end -1 ;
+grid-row: row-start / row end -1 ;  
+
+EX:column
+grid-column: 1 / 5 ; [5]to the column 4
+grid-column:span 4 ;the number of columns 
+
+Ex:rows
+grid-row: 1 / 5 ; [5]to the row 4
+grid-row:span 4 ;the number of rows
+.cl1 {
+    grid-column: 1 / 5;
+    it's take the space from the 
+    grid-column: span 4;
+
+*/
+/* 62-Grid child [Area] and Trainings
+    
+    grid-row-start: 2;
+    grid-column-start: 2;
+    grid-row-end: 5;
+    grid-column-end: 4;
+
+    =>shorthand:
+        grid-area:[grid-row-star] [grid-column-star] [grid-row-end] [grid-column-end] ;    
+ 
+    EX:
+        grid-area: 3 /3 /4 /6;
+.parent{
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    justify-content: space-between;
+    align-content: space-between;
+    gap: 20px 20px;
+    // head -> the first three  columns 
+    // nav the second  three  columns
+    grid-template-areas: "head head head nav nav nav";
+}
+
+//  and you should write it's name in the class that follow it .
+        .cl1 {
+            grid-area: head;
+        }
+        .cl2 {
+            grid-area: nav;
+        }
+    
+*/
+/* 63-grid Min Max and Auto-fill  
+    grid-template-columns: minmax(200px, 400px) auto auto; 
+        =>meaning the min=200px and the max=400px for the first column 
+        and [seconad and third]=auto.
+    
+    [auto-fill] meaning automatically fill the  space area of the page 
+    grid-template-columns: repeat(Auto-fill, minmax(200px, 1fr));
+
+    ==>two things don't expalane
+        1-[auto-fit]
+        2-unit tools dimintion[ch add columns according to number of the character]
+    
+*/
+/* 64-CSS grid garden  game
+    1===>shorthand for grid-column-(start or end):
+        grid-column:start / end (OR) span
+        EX:
+        grid-column:1 / 5 =>meaning start from column (1) and end from column (4) not  (5)
+        grid-column: 2 / span 4 => meaning start from column (2) and set it in (4) column
+
+    2===>shorthand for grid-row-(start or end):
+        grid-row:start / end (OR) span
+        EX:
+        grid-row:1 / 5 =>meaning start from row (1) and end from row (4) not  (5)
+        grid-row: 2 / span 4 => meaning start from row (2) and set it in (4) row
+
+    3==>shorthand for grid-row (or) clumns -(start or end):
+        grid-area:row-start /column-start / row-end /column-end   [(OR) span]
+        EX:
+        grid-area:1 / 2 / 4 /5
+        =>meaning start from row (1) and end from row (3) not  (5)
+        =>meaning start from column (2) and end from column (4) not  (5)   
+        grid-area: 2 / 1 / span 3 / span 3=> 
+        meaning start from row (2) and set it in (3) row
+        meaning start from column (1) and set it in (3) column
+    4==>shorthand for grid-template-rows (or) clumns :
+        grid-template:row1 row2 ... /column1 column2 ... 
+
+        EX:
+        grid-template: 50% 50% / 200px 200px
+        =>two 50% meaning two rows with width 50%
+        => two 200px meaning two columns with height 200px
+EX:
+.parent {
+    display: grid;
+    grid-template-columns: 100px 20ch 100px 100px 100px;
+    grid-template-areas:
+        "head head "
+        "side cont "
+        "foot foot   "
+    ;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    grid-template-columns: 1fr 3fr;
+    gap: 20px 20px;
+    margin: 20px auto;
+    height: 500px;
+    background-color: green;
+    display: grid;
+    grid-template-columns: repeat(Auto-fill, minmax(200px, 1fr));
+    grid-template-columns: minmax(200px, 400px) auto auto; 
+    
+    padding: 0px;
+    width: 800px;
+    grid-template-columns: repeat(6, 1fr);
+    justify-content: space-between;
+    align-content: space-between;
+    gap: 20px 20px;
+    grid-template-areas: "head head head nav nav nav";
+
+    grid-template-rows: repeat(3, auto);
+    row-gap: 20px;
+    column-gap: 20px;
+    grid-template-rows: 200px auto 200px;
+    in case of using [fraction 1fr or more ] fist and second rows take only the space of content [height]  
+    and third take enduring الباقي of [height]
+    grid-template-rows: repeat(3, calc(100% / 3));
+}
+
+.head {
+    width: 600px;
+
+    grid-area: head;
+    background-color: rgb(187, 187, 8);
+}
+
+.side {
+    width: 200px;
+    grid-area: side;
+    background-color: rgb(55, 55, 116);
+}
+
+.cont {
+    width: 600px;
+    grid-area: cont;
+    background-color: rgb(34, 61, 34);
+}
+
+.foot {
+    width: 600px;
+    grid-area: foot;
+    background-color: rgb(68, 14, 14);
+}
+
+
+.parent div {
+
+    text-align: center;
+    padding: 10px;
+    margin: 10px;
+
+    background-color: blue;
+    font-size: 30px;
+    text-align: center;
+    color: aliceblue;
+    padding: 20px;
+
+}
+
+.cl1 {
+    grid-area: head;
+    grid-column: 1 / 5;
+    //it's take the space from the uder if it avilable
+    grid-column: span 4;
+}
+
+.cl2 {
+    grid-area: nav;
+}
+
+*/
+/* 65-2D transform  [ Scale ] meaing [Zoom for the element]
+1-tarnsform:scaleX(2);
+    -> meaning do fit or strech in two direction [horizental (axis-X)] 
+    -> (2) meaning do fit to the shape 2once or (double) [the main] shape  
+    
+2-tarnsform:scaleY(3);
+    -> meaning do fit or strech in two direction [vertical (axis-Y)] 
+    -> (3) meaning do fit to the shape 3 once [the main] shape  
+    ==>shorthand of scale[X ,Y]    
+3-tarnsform:scale(2 ,3);
+-Note if [Y] don't write will tack the same value of the [X] 
+-> meaning do fit or strech in two direction [horizental (axis-X)] value [2] 
+-> meaning do fit or strech in two direction [vertical (axis-Y)] value [3] 
+-> (2) meaning do fit to the shape 2 once [the main] shape  
+-> (3) meaning do fit to the shape 3 once [the main] shape  
+Note : If the scale tack a negative value will do a flapping [revers for the content]
+4-tarnsform:scale(-1 ,-1) meaing reverse value to  [X and Y]; very imprtant
+
+*/
+/* 66-2D transform [ Rotate ] [return] [الدوران]
+        -deg => Degree  
+        -rad => Radians
+        -grad =>Gradians
+        -turn [.5turn] or [.25turn]=> turn [360 deg] =[]
+    ====>[360deg] = [6.28rad] = [400 grad] = [1 turn] 
+    EX: 
+    transform: rotate(50deg);
+    tarnsform:rotate(45deg)
+    Note => in case using negative value it will return in another direction
+    tarnsform:rotate(-45deg)
+
+->shorthand for [scale] and [rotate]
+    -transform:rotate(360deg) scale(1.6);
+    OR => transform:scale(1.6) rotate(360deg);
+    opacity: .6;  meaning alpha chanal
+EX:
+.imag {
+    overflow: hidden;
+    width: 200px;
+    height: 300px;
+    margin: 20px auto;
+}
+
+.imag img {
+    transition: 0.5s;
+}
+
+.imag:hover img {
+    shorthand for [scale] and [rotate]
+    transform: rotate(360deg) scale(1.6);
+    transform: scale(1.2);
+    transform: rotate(45deg)
+}
+
+    */
+/* 67-2D transform [ Translate ]
+    =>meaning move the element to [axis-X or axis-Y ]
+    ->transform:translate(axis-x[horizenta](any unit you can use), axis-Y[virtecal] defualt[0])
+EX:
+    transform:translate(100px,200px);
+Note if we use a negetive value the element will move to reverse direction
+    transform:translate(-100px,-200px);
+very important don't forget to use the prefexes for any transfrom
+-webkit-transform:tarnslate();
+-moz-transform:tarnslate();
+-ms-transform:tarnslate();
+-o-transform:tarnslate();
+transform:tarnslate();
+*/
+/* 68-2D transform [ Skew ](انحراف)
+    transfrom:skewX(50deg);
+        ->doing skew in direction of the [axis-X].
+        -you can use negative value[transfrom:skewX(-50deg);]. 
+        
+        transfrom:skewY(40deg);
+        doing skew in direction of the [axis-Y]
+        -you can use negative value[transfrom:skewY(-40deg);]. 
+=>shorthand for skew:
+        transfrom:skew(50deg ,default[0]);
+        transfrom:skew(50deg ,30deg);
+Note don't put it in the [ head (h2) ] to fixed the copntent  
+    =>transform: skew(45deg,-1deg);
+EX:
+h2 {
+    position: relative;
+    color: white;
+    margin: 20px auto;
+    width: fit-content;
+    padding: 20px;
+}
+
+h2::before {
+    content: "";
+    background-color: rgb(19, 102, 102);
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    transform: skew(45deg,-1deg);
+}
+    */
+/* 69-2D transform [ matrix tacking 6 value]
+    syntax => matrix(scaleX(), skewX(),skewY(),scaleY(),translateX(),translateY())
+    Note the first thing the element do it is [translate]->[scale]->[skew]->[rotete] 
+
+default for the matrix:
+transform: matrix(1, 0, 0, 1, 0, 0);
+    */
+/* 70-2D transform [origin ]
+    default value->[X=50% Y=50% (in case 3D Z=0)]
+    2D transform => transform-origin(X  Y)
+    3D transform => transform-origin(X Y Z)
+    =>X-axis:
+        a-CSS units[px ,em ,rem]
+        b-%
+        c-keyword[left=0% ,center =50% ,right=100%]
+
+    =>Y-axis:
+        a-CSS units[px ,em ,rem]
+        b-%
+        c-keyword[top=0% ,center =50% ,bottom=100%]
+   meaning this class .origin is the center of class transform 
+     transform-origin: 50% 50%; 
+    transform-origin: center center;
+Ex:
+h2 {
+    position: relative;
+    color: white;
+
+    margin: 20px auto;
+    width: fit-content;
+    padding: 20px;
+}
+
+h2::before {
+    content: "";
+    background-color: rgb(19, 102, 102);
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    transform: skew(45deg, -1deg);
+}
+
+.shape {
+    position: relative;
+    width: 210px;
+    height: 210px;
+    background-color: rgb(82, 60, 38);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    font-size: 30px;
+    margin: 5% auto;
+}
+.shape .transform {
+    // transform: translate(100px, 0); //
+    // transform: skew(56deg, -56deg); //
+    // transform: rotate(45deg); //
+    // transform: scaleX(3); //
+    // transform: scaleY(3); //
+    // transform: rotate(90 deg); //
+    // transform: scale(-1); //
+    position: absolute;
+    transition: .5s;
+    width: 200px;
+    height: 200px;
+    background-color: rgb(45, 155, 11);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    font-size: 30px;
+    margin: 5%;
+}
+.shape .origin {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: brown;
+    border-radius: 50%;
+    left: 50%;
+    top: 50%;
+    z-index: 1;
+    transform: translate(-50%, -50%);
+    transform-origin: center center;
+}
+    */
+/* 71-3D transform [rotate] and [training] 
+    transform: rotate3d(X, Y, Z, 45deg);
+    deaulttransform: rotate3d(0, 0, 0, 45deg);
+*/
+/* 72-3D transform [Tanslate] , [Perspective] and [Perspective-origin]
+
+    -perspective:
+        meaning the distance between the elemnt and you 300px 
+        ex:
+        perspective: 300px;
+    -Perspective-origin don't work alone it's working with [perspective]
+        it's like transform-origin
+        EX:
+        perspective-origin: center center;you look from center
+        perspective-origin: top right;you look from bootomrigh
+        perspective-origin: top left;you look from bottomright
+        perspective-origin: bottom left;you look from topright
+        perspective-origin: bottom right;you look from topleft
+EX:
+.shape {
+    position: relative;
+    width: 210px;
+    height: 210px;
+    background-color: rgb(82, 60, 38);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    font-size: 30px;
+    margin: 5% auto;
+    perspective: 300px;
+    perspective-origin: left right;
+}
+
+.shape .transform {
+    transform: translate(100px, 0);
+     transform: skew(56deg, -56deg); 
+     transform: rotate(45deg); 
+     transform: scaleX(3); 
+     transform: scaleY(3); 
+     transform: rotate(90 deg); 
+     transform: scale(-1); 
+     position: absolute;
+     transition: 1s;
+     width: 200px;
+     height: 200px;
+     background-color: rgb(45, 155, 11);
+     color: white;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     font-weight: bold;
+     font-size: 30px;
+     margin: 5%;
+     transform: rotateX(-79deg);
+     transform: rotateX(50deg);
+     transform-origin: 0% 100%;
+ }
+*/
+/* 73-3D transform [Backface] [Visabilite]  and flip product
+steps to do back-face with 3D:
+    1->backface-visibility: hidden;[in parent (in class face)]
+    
+    2->Flip: to do fliping the [back element ]  (rotate(Y):180deg )
+        -should be[rotate[Y}=180deg] [in the back face]
+        -in class [back]    
+    3->transform-style: preserve-3d; should wirte to save palce[status] in the 3D.
+      -transform-style: flat;  wirte if you don't want to save place in the 3D.
+      -in class [box]
+      -transtion:transfrom 1.5s; meaning do this transtion to properity transform
+    
+    4-do hover
+        .box:hover {
+        transform: rotateY(-180deg);
+        }
+    5-perspective: 600px;[in class container]
+
+EX:
+.container {
+    margin: 100px auto;
+    width: 200px;
+    perspective: 400px;
+    background-color: rgb(153, 147, 147);
+}
+
+.box {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    transform-style: preserve-3d;
+    transition: transform 1.5s;
+    transform-origin: 100% 100%;
+    background-color: rgb(206, 159, 99);
+
+}
+
+.box:hover {
+    transform: translateX(-100%) rotateY(-180deg);
+}
+
+.box .face {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 50px;
+    font-weight: bold;
+    color: #141313;
+    backface-visibility: hidden;
+}
+
+.box .front {
+    
+    background-color: rgb(13, 78, 62);
+}
+
+.box .back {
+    background-color: brown;
+
+    transform: rotateY(180deg);
+}    
+*/
+/* 74-Animation => KeyFrames , Name and Duration
+    steps to do animation :
+        1-@keyframes [animation name] change-color {
+            from {background-color: rgb(129, 129, 9);}
+            to {background-color: rgb(33, 95, 33);}
+            }
+        Note [from =0%]
+             [to =100%]
+        2-go to the element that you want to do animation for it and give it the name
+        and the time that will change in it ;
+          -animation-name:change-color;
+          -animation-duration:6s;the time will take it the animation
+EX:.box {
+    position: absolute;
+    width: 350px;
+    height: 350px;
+    left: 50%;
+    top: 50%;
+    background-color: brown;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translate(-50%, -50%);
+    font-size: 50px;
+    font-weight: bold;
+    color: #141313;
+    //animation
+    animation-name: change-color;
+    animation-duration: 6s;
+
+}
+
+@keyframes change-color {
+
+     from {
+        background-color: rgb(85, 9, 129);
+
+    }
+
+    to {
+        background-color: rgb(197, 207, 197);
+        color: red;
+    } 
+    0% {
+        background-color: rgb(85, 9, 129);
+
+    }
+
+    50% {
+        background-color: rgb(16, 242, 46);
+
+    }
+
+    100% {
+        background-color: rgb(197, 207, 197);
+        color: red;
+    }
+}
+          */
+/* 75-Animation [iteration-count] , Timing function and spinner-loading \
+    -spinner-loading meaning the [الدائر الي بتلف حتي تتحمل الصفحة]
+    
+    -animation-iteration-count: infinite; meaning do this animation for infinte[الي مالانهية]
+        or meaning repet this animation for ever
+    -animation-iteration-count: 2; meaning do this animation only [2 once]
+    -animation-timing-function: ease; using to can delete the stop time between [turns]
+    -animation-timing-function: linear; using to can delete the stop time between [turns]
+EX:
+.box {
+    position: absolute;
+    width: 350px;
+    height: 350px;
+    left: 50%;
+    top: 50%;
+    margin-left: -175px;
+    margin-top: -175px;
+    background-color: #dfd1d1;
+    font-size: 50px;
+    font-weight: bold;
+    color: #141313;
+    animation-name: spin;
+    animation-duration: 2s;
+    border: 15px solid #235f7a;
+    border-radius: 50%;
+    border-left-color: transparent;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+@keyframes spin {
+
+    0% {
+        transform: rotate(0deg);
+
+    }
+
+    100% {
+        transform: rotate(1turn);
+    }
+}    
+*/
+/* 76-Animation [direction] [delay] [fill mode ][play state]
+    1-[direction] -> meaning the direction of the animation [default noraml]
+        -animation-direction: reverse; meaning reverse the clock
+        -animation-direction: alternate;meaning turn to right and back to left .
+        -animation-direction: alternate-reverse;meaning turn to left and back to right .
+
+    2-[delay]->meaning delay the animation 
+         -animation-delay: 2s ;meaning delay the animation [two second]
+         -animation-delay: -2s ;meaning delet from the animation time [two second]
+    
+    3-[fill mode ] meaning take the last mode of the animation
+        -animation-fill-mode:forwards;meaning take the [last mode] of the animation and fixed
+        -animation-fill-mode:backwards;meaning take the [firs mode] of the animation and fixed
+        -animation-fill-mode: both; the last one according to animation-direction
+
+    4-[animation-play-state] meaning whene stop by mouse the animation will stop
+        -animation-play-state: running; [running is the default value]
+    
+    5-[shorthand for animation]
+        -animation:[A-name] [A-duration] [A-time-function] [A-delay] [A-iteration-count] [A-direction]
+        -animation:colorr 4s linear -2s infinite reverse;
+        -animation: colorr 4s ease -2s 2 alternate-reverse;
+EX:complete example for every thing in animation:
+.box {
+    position: absolute;
+    width: 350px;
+    height: 350px;
+    left: 50%;
+    top: 50%;
+    margin-left: -175px;
+    margin-top: -175px;
+    background-color: #dfd1d1;
+    font-size: 50px;
+    font-weight: bold;
+    color: #141313;
+    animation-name: colorr;
+    animation-duration: 5s;
+    border: 15px solid #235f7a;
+    border-radius: 50%;
+    border-left-color: transparent;
+    border-right-color: transparent;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-direction: normal;
+    animation-delay: 2s;
+    animation-fill-mode: backwards;
+    animation-fill-mode: both;
+    animation-play-state: running;
+    animation-direction: reverse;
+    animation: colorr 4s linear -2s infinite reverse;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    transition: transform 3s;
+    outline: 85px solid blueviolet;
+}
+
+.box:hover {
+    animation-play-state: paused;
+}
+
+.box .ss {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #134724;
+    font-size: 0px;
+    font-weight: bold;
+    color: #141313;
+    animation-duration: 2s;
+    border: 15px solid #235f7a;
+    border-radius: 50%;
+    transition-timing-function: linear;
+
+}
+
+@keyframes colorr {
+
+
+    0% {
+        background-color: #11d7b2;
+
+    }
+
+    50% {
+        background-color: rgb(38, 38, 117);
+
+    }
+
+    100% {
+        background-color: #f06306;
+
+    }
+
+    from {
+        background-color: rgb(85, 9, 129);
+
+    }
+
+    to {
+        background-color: rgb(197, 207, 197);
+        color: red;
+    }
+}
+        
+*/
+/* 77-Animation UP and Down  Animation traingings 
+EX:
+.load {
+    display: flex;
+    justify-content: center;
+    margin: 50px auto;
+}
+
+.load div {
+    width: 20px;
+    height: 20px;
+    background-color: rgb(119, 152, 165);
+    margin: 0 5px;
+    border-radius: 50%;
+    animation-name: up-and-down;
+    animation-duration: 0.9s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-direction: alternate-reverse;
+}
+
+.load .two {
+    animation-delay: 0.3s;
+}
+
+.load .three {
+    animation-delay: 0.6s;
+}
+
+@keyframes up-and-down {
+    //if [from] was oready the the default value for your property you can don't write it
+     like [from{opacity:1; }] 
+    to {
+        opacity: 0.2;
+        transform: translateY(30px);
+    }
+}
+*/
+/* 78-selectors Refrences part1
+       -[ * ] meaning select all element and do something about it.
+       -Element [p,div ] do some thing for all [p] or [div]
+       -Element other element[div p] meaning target all [p] that found in all [div]
+       -.class-name
+       -#id-name
+       -.parent .child
+       -.class-one.class-two ->meaning element have [two of class-name] 
+            [don't have any space between them]
+       -.class-name div,
+        .class-name p{}this a grouping 
+       -Element.class-name[p.class-name{}]
+       -.parent >.child meaning dirct child without any elements between them 
+       if foun these properties not work 
+       */
+/* 79-selectors Refrences part2 
+       -Element + other element[div+p{}]=>meaning do this properity for a
+       [p] that have only before it [div] 
+       EX:div+p {
+           color: red;
+        }
+    -Element ~ elements [p ~ div] meaning do this properities for a all divs 
+       ex: p~div {
+            color: red;
+        }
+    -attribute meaning do this properties for all elements that attribute [ex:title]    
+    EX: [title] {
+        color: red;
+    }
+    -element[attribute] => meaning do this properties for all elements that attribute [ex:title]    
+    OR:
+    div[title] {
+        color: red;
+    }
+    -[attribute=value]=> meaning do this properties for all elements that attribute [ex:title="value"]    
+        ex: div[title="3"] {
+                color: red;
+            }
+            -Element[attribute=value]=> meaning do this properties for all elements that attribute [ex:title="value"] 
+            ex: div[title="3"] {
+                color: red;
+            }
+            -[attribute~=value]=meaning any attribute contains  a word alone (not string) like[a1]
+                EX:[title~="div"] {
+                        color: red;
+                    }
+    -[attribute*=value]=meaning any attribute contains  a string like[a1] all 
+        strings contains (div)
+            EX:[title*="div"] {
+                    color: red;
+                }
+    -[attribute^=value]=meaning a string start with [ai]  
+        strings contains (div)
+            EX:[title^="s0"] {
+                    color: red;
+                }
+
+    */
+/* 80-selectors Refrences part3
+    - :first-child for the parent
+        EX: p:first-child {
+        color: red;
+        }
+    - :last-child for the parent
+        EX:div:last-child {
+            color: red;
+        }
+    -:first-of-type [الاول من نوعة]    
+    EX:div:last-of-type {
+        color: red;
+    }
+    -:last-of-type [الاول من نوعة]
+        EX:div:last-of-type {
+            color: red;
+        }
+
+    -only-child for this parent [fist and last child in this parent]
+            EX: p:only-child {
+                color: red;
+                }
+    -only-of-type in this parent 
+                EX: p:only-of-type {
+                    color: red;
+                    }
+                */
+/* 81-selectors Refrences part4[website->(nthmaster.com] 
+    -:not(selector-b) meaning  do this property for  all selectors ecept selector-b 
+            p:not(:first-child) {
+                color: red;
+            }
+    -:nth-child(n)=>it's using to can access with the number of the child[from first]
+        where (n) meaning the number of the child in his parent
+        in (n) you can set [odd,even,n+3,-n+3,....] 
+        EX:p:nth-child(2){
+            color:red;
+        }
+    -:nth-last-child(n)=>it's using to can access with the number of the child[from last]
+            -div:nth-last-child(2) {
+                color: red;
+            }
+    -nth-of-type(n)=>meaning the [number n of type ] do about it the properties [from first]
+            EX:P:nth-of-type(2) {
+            color: red;
+            }
+            
+    -nth-of-type(n)=>meaning the [number n of type] do about it the properties [from last]
+            EX:P:nth-last-of-type(2) {
+            color: red;
+            }
+            */
+/* 82-selectors Refrences part5 
+        -:root{}
+        -:checked    
+            meaning do color:red for the [label] that have bofore  it (input[type="checkbox"]:checked)  
+            input[type="checkbox"]:checked+label {
+                color: red;
+            }
+        -:empty meaning if you found the element empty do this properity
+            EX:
+                div:empty {
+                width: 200px;
+                height: 200px;
+                background-color: green;
+            }
+        -:disabled EX:input:disabled {properties}
+        -:required EX:input:required {properties}
+        -:focus EX:input:focus {properties}
+        -::selection EX:input::selection {properties} meaning this for this selection
+            div::selection{
+                background-color:red;
+            }
+        -::placeholder EX: .class-name::placeholder{properties}
+            EX::placeholder {
+                background-color: wheat;
+                color: gray;
+            }
+            */
+/* 83-[Media-Queries] and [Responsive]-intro 
+        a-[Media-Queries]:
+            1-in case you are [print]
+            EX:@media print {
+                .parent>div:first-child {
+                    display: none;
+                }
+            }
+            2-in case you are control in the [Area of the screen] 
+            @media (min-width:1000px) and (max-width:1300px) {
+                .parent>div {
+                    background-color: rgb(34, 18, 107);
+                }
+            }
+            */
+/* 84-[Media-Queries] and [Responsive] Standars
+        -you can put the media in a new file and set it in the [HTML file] by write it in the link
+          =>in file HTML-><link rel="stylesheet" href="print.css" media="print" >
+EX:
+// 1-Mopile screen for the container //
+
+@media(max-width:767px) {
+    .container {
+        width: 750px;
+    }
+
+}
+
+// 2-samll screen for the container //
+@media(min-width:768px) {
+    .container {
+        width: 750px;
+    }
+
+}
+
+// 3-medim screen for the container//
+@media(min-width:992px) {
+    .container {
+        width: 970px;
+    }
+
+}            
+// 4-larg screen for the container//
+@media(min-width:1200px) {
+    .container {
+        width: 1170px;
+    }
+
+}
+*/
+/* 85-[Media-Queries] and [Responsive] practice
+    =>to do media in HTML write this:
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+EX:    
+    .parent {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+
+    }
+     .parent div {
+    background-color: green;
+    color: white;
+    padding: 20px;
+    font-size: 20px;
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 5px;
+    flex-basis: 100%;-> it's like width but it's very beautiful
+}
+
+// 1-Mopile screen for the container //
+
+@media(max-width:767px) {}
+
+// 1-samll screen for the container //
+@media(min-width:768px) and (max-width:991px) {
+    .parent div {
+        flex-basis: calc(50% - 5px);
+    }
+}
+
+// 2-medim screen for the container//
+@media(min-width:992px) {
+    .parent div {
+        flex-basis: calc(25% - 5px);
+    }
+}
+
+
+// 3-larg screen for the container//
+@media(min-width:1200px) {}
+
+
+*/
+/* 86-create your Framework 
+    -it's using to can do class to reduce of the repeat some properties 
+        and write this class in the HTML class 
+*/
+/* 87- Global Values
+    -CSS  Global Values:
+        ->inherit ->meaning inhert from the parent
+        ->initial ->it's meaning the default value for these elements 
+          -Note that the default Value For all elements are [inline] 
+            and [the (user agent stylesheet) in the browser determin it  are block or any thing ]  
+          -Note that the default Value For the color  are change from bowther to another  
+        ->unset
+           -->if inherit =>inhert -> meaning in case this value inherit from parent the [unset] 
+           work as (unset=inherit)   
+           -->if not =>initial -> meaning in case this value don't inherit from parent the [unset] 
+           work as (unset=initial)   
+        ->revert CSS level [4] -> it's meaning reverse this properities to the [user agent stylesheet]
+        -All ->(the properties that are inhert ) meaning do [all inhert ]
+            (the properties that are not inhert ) meaning do [all initial ]
+*/
+/* 88-what is the next
+    - 4 Practical designs
+    -HTML+CSS
+    -website[css-battle.dev] fro training
+    -website[frontend mentors ]
+    -elzero Challanges 
+    -codepen.io
+*/
+* {
+  /* meaning the properities For all */
+  box-sizing: border-box;
+  padding: 0;
+  /*  there are 8px by default of margin */
+  margin: 0;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: gray;
+}
+
+div {
+  color: green;
+  font-weight: bold;
+  background-color: #eee;
+  padding: 20px;
+  margin: 5px;
+  border: 3px solid black;
+}
